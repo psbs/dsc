@@ -17,10 +17,11 @@ public class MainClass {
             System.out.println(aliases.nextElement());
         }  
         
-        String alias="cert_alias";
+        String alias="aliasname";
+        String dsc_password="";
         
-        PrivateKey privKey = (PrivateKey) ks.getKey(alias, null);
-	    System.out.println("PRIV KEY: "+privKey.getEncoded());
+        PrivateKey privKey = (PrivateKey) ks.getKey(alias, dsc_password.toCharArray());
+	    System.out.println("PRIV KEY: "+privKey);
         
         Certificate cert = ks.getCertificate(alias);
         System.out.println("PUB KEY: "+Base64.getEncoder().encodeToString(cert.getPublicKey().getEncoded()));
