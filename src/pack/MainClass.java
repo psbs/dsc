@@ -5,8 +5,6 @@ import java.security.cert.Certificate;
 import java.util.Base64;
 import java.util.Enumeration;
 
-
-
 public class MainClass {
 
 	public static void main(String[] args) throws Exception {
